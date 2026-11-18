@@ -1,0 +1,443 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>Admin Dashboard | CampusConnect</title>
+
+    <link rel="stylesheet" href="css/style.css">
+
+</head>
+
+<body>
+
+    <!-- ================= NAVBAR ================= -->
+
+    <header class="navbar">
+
+        <div class="logo">
+            CampusConnect Admin
+        </div>
+
+        <nav>
+
+            <a href="index.html">
+                Student Portal
+            </a>
+
+            <button
+                id="logout-button"
+                type="button">
+
+                Logout
+
+            </button>
+
+        </nav>
+
+    </header>
+
+
+    <!-- ================= MAIN ================= -->
+
+    <main class="admin-section">
+
+        <h1>
+            Admin Dashboard
+        </h1>
+
+        <p>
+            Manage clubs, events and recruitment applications.
+        </p>
+
+
+        <!-- ================= STATISTICS ================= -->
+
+        <div class="admin-stats">
+
+            <div class="stat-card">
+
+                <h2 id="club-count">
+                    0
+                </h2>
+
+                <p>
+                    Clubs
+                </p>
+
+            </div>
+
+
+            <div class="stat-card">
+
+                <h2 id="event-count">
+                    0
+                </h2>
+
+                <p>
+                    Events
+                </p>
+
+            </div>
+
+
+            <div class="stat-card">
+
+                <h2 id="application-count">
+                    0
+                </h2>
+
+                <p>
+                    Recruitment Applications
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <!-- ================= MANAGE CLUBS ================= -->
+
+        <section class="admin-management">
+
+            <div class="management-header">
+
+                <h2>
+                    Manage Clubs
+                </h2>
+
+                <button
+                    id="add-club-button"
+                    type="button">
+
+                    + Add Club
+
+                </button>
+
+            </div>
+
+
+            <div id="admin-clubs-container">
+
+                <p>
+                    Loading clubs...
+                </p>
+
+            </div>
+
+        </section>
+
+
+        <!-- ================= MANAGE EVENTS ================= -->
+
+        <section class="admin-management">
+
+            <div class="management-header">
+
+                <h2>
+                    Manage Events
+                </h2>
+
+                <button
+                    id="add-event-button"
+                    type="button">
+
+                    + Add Event
+
+                </button>
+
+            </div>
+
+
+            <div id="admin-events-container">
+
+                <p>
+                    Loading events...
+                </p>
+
+            </div>
+
+        </section>
+
+
+        <!-- ================= APPLICATIONS ================= -->
+
+        <section class="admin-applications">
+
+            <h2>
+                Recruitment Applications
+            </h2>
+
+            <div id="applications-container">
+
+                <p>
+                    Loading applications...
+                </p>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <!-- ==================================================
+         CLUB MODAL
+    ================================================== -->
+
+    <div
+        id="club-modal"
+        class="admin-modal">
+
+        <div class="admin-modal-content">
+
+            <button
+                id="close-club-modal"
+                class="close-modal"
+                type="button">
+
+                ×
+
+            </button>
+
+
+            <h2 id="club-modal-title">
+                Add Club
+            </h2>
+
+
+            <form id="club-form">
+
+                <input
+                    type="hidden"
+                    id="club-id">
+
+
+                <label for="club-name">
+                    Club Name
+                </label>
+
+                <input
+                    type="text"
+                    id="club-name"
+                    required>
+
+
+                <label for="club-category">
+                    Category
+                </label>
+
+                <input
+                    type="text"
+                    id="club-category"
+                    required>
+
+
+                <label for="club-description">
+                    Description
+                </label>
+
+                <textarea
+                    id="club-description"
+                    required></textarea>
+
+
+                <label for="club-members">
+                    Members
+                </label>
+
+                <input
+                    type="number"
+                    id="club-members"
+                    min="0"
+                    value="0"
+                    required>
+
+
+                <label for="club-recruitment">
+                    Recruitment
+                </label>
+
+                <select id="club-recruitment">
+
+                    <option value="true">
+                        Open
+                    </option>
+
+                    <option value="false">
+                        Closed
+                    </option>
+
+                </select>
+
+
+                <label for="club-deadline">
+                    Recruitment Deadline
+                </label>
+
+                <input
+                    type="date"
+                    id="club-deadline">
+
+
+                <button
+                    type="submit">
+
+                    Save Club
+
+                </button>
+
+            </form>
+
+        </div>
+
+    </div>
+
+
+    <!-- ==================================================
+         EVENT MODAL
+    ================================================== -->
+
+    <div
+        id="event-modal"
+        class="admin-modal">
+
+        <div class="admin-modal-content">
+
+            <button
+                id="close-event-modal"
+                class="close-modal"
+                type="button">
+
+                ×
+
+            </button>
+
+
+            <h2 id="event-modal-title">
+                Add Event
+            </h2>
+
+
+            <form id="event-form">
+
+                <input
+                    type="hidden"
+                    id="event-id">
+
+
+                <label for="event-title">
+                    Event Title
+                </label>
+
+                <input
+                    type="text"
+                    id="event-title"
+                    required>
+
+
+                <label for="event-club">
+                    Club
+                </label>
+
+                <input
+                    type="text"
+                    id="event-club"
+                    required>
+
+
+                <label for="event-category">
+                    Category
+                </label>
+
+                <input
+                    type="text"
+                    id="event-category"
+                    required>
+
+
+                <label for="event-description">
+                    Description
+                </label>
+
+                <textarea
+                    id="event-description"
+                    required></textarea>
+
+
+                <label for="event-date">
+                    Event Date
+                </label>
+
+                <input
+                    type="date"
+                    id="event-date"
+                    required>
+
+
+                <label for="event-time">
+                    Time
+                </label>
+
+                <input
+                    type="text"
+                    id="event-time"
+                    placeholder="10:00 AM"
+                    required>
+
+
+                <label for="event-venue">
+                    Venue
+                </label>
+
+                <input
+                    type="text"
+                    id="event-venue"
+                    required>
+
+
+                <label for="event-deadline">
+                    Registration Deadline
+                </label>
+
+                <input
+                    type="date"
+                    id="event-deadline">
+
+
+                <label for="event-seats">
+                    Available Seats
+                </label>
+
+                <input
+                    type="number"
+                    id="event-seats"
+                    min="0"
+                    value="0">
+
+
+                <button
+                    type="submit">
+
+                    Save Event
+
+                </button>
+
+            </form>
+
+        </div>
+
+    </div>
+
+
+    <script src="js/admin.js"></script>
+
+</body>
+
+</html>

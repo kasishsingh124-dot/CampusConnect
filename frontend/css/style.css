@@ -1,0 +1,827 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f5f7fb;
+    color: #222;
+    line-height: 1.6;
+}
+.navbar {
+    background-color: #ffffff;
+
+    padding: 18px 50px;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    border-bottom: 1px solid #e5e5e5;
+
+    position: sticky;
+    top: 0;
+
+    z-index: 100;
+}
+
+
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+
+.navbar nav {
+    display: flex;
+    gap: 25px;
+}
+
+
+.navbar a {
+    text-decoration: none;
+
+    color: #333;
+
+    font-weight: 500;
+}
+
+
+.navbar a:hover {
+    color: #4f46e5;
+}
+.hero {
+    padding: 90px 20px;
+
+    text-align: center;
+
+    background: linear-gradient(
+        135deg,
+        #eef2ff,
+        #f8fafc
+    );
+}
+.hero-content {
+    max-width: 750px;
+
+    margin: auto;
+}
+.hero h1 {
+    font-size: 42px;
+
+    margin-bottom: 20px;
+}
+.hero p {
+    font-size: 18px;
+
+    color: #666;
+
+    margin-bottom: 30px;
+}
+.primary-btn,
+.secondary-btn,
+button {
+    display: inline-block;
+
+    padding: 11px 22px;
+
+    border: none;
+
+    border-radius: 8px;
+
+    background-color: #4f46e5;
+
+    color: white;
+
+    font-size: 15px;
+
+    cursor: pointer;
+
+    text-decoration: none;
+}
+.primary-btn:hover,
+.secondary-btn:hover,
+button:hover {
+    background-color: #3730a3;
+}
+.clubs-section,
+.events-section,
+.recruitment-section,
+.placeholder-section {
+    padding: 60px 50px;
+}
+.section-heading {
+    text-align: center;
+
+    max-width: 700px;
+
+    margin: 0 auto 35px;
+}
+.section-heading h1,
+.section-heading h2 {
+    margin-bottom: 10px;
+
+    font-size: 30px;
+}
+.section-heading p {
+    color: #666;
+}
+.clubs-container {
+    max-width: 1100px;
+    margin: auto;
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(3, 1fr);
+
+    gap: 25px;
+}
+.club-card {
+    background-color: white;
+
+    padding: 25px;
+
+    border-radius: 12px;
+
+    border: 1px solid #e5e7eb;
+
+    box-shadow:
+        0 4px 15px rgba(0, 0, 0, 0.06);
+
+    transition: 0.2s;
+}
+.club-card:hover {
+    transform: translateY(-4px);
+
+    box-shadow:
+        0 8px 25px rgba(0, 0, 0, 0.1);
+}
+.club-card h3 {
+    font-size: 21px;
+
+    margin-bottom: 12px;
+}
+.club-card p {
+    margin: 8px 0;
+
+    color: #555;
+}
+.club-card button {
+    margin-top: 12px;
+}
+#events-container {
+    max-width: 1100px;
+
+    margin: auto;
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(3, 1fr);
+
+    gap: 25px;
+}
+.event-card {
+    background-color: white;
+
+    padding: 25px;
+
+    border-radius: 12px;
+
+    border: 1px solid #e5e7eb;
+
+    box-shadow:
+        0 4px 15px rgba(0, 0, 0, 0.06);
+}
+.event-card h2 {
+    margin-bottom: 15px;
+
+    font-size: 21px;
+}
+.event-card p {
+    margin: 8px 0;
+
+    color: #555;
+}
+.event-card button {
+    margin-top: 12px;
+}
+#event-details {
+    max-width: 850px;
+
+    margin: auto;
+
+    padding: 60px 20px;
+}
+.event-details-card {
+    background-color: white;
+
+    padding: 40px;
+
+    border-radius: 15px;
+
+    border: 1px solid #e5e7eb;
+
+    box-shadow:
+        0 5px 20px rgba(0, 0, 0, 0.08);
+}
+.event-details-card h1 {
+    margin-bottom: 15px;
+
+    font-size: 32px;
+}
+.event-details-card h2 {
+    margin-top: 25px;
+
+    margin-bottom: 15px;
+}
+.event-details-card p {
+    margin: 12px 0;
+}
+.event-details-card hr {
+    margin: 25px 0;
+
+    border: none;
+
+    border-top: 1px solid #ddd;
+}
+#recruitment-container {
+    max-width: 1100px;
+
+    margin: auto;
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(3, 1fr);
+
+    gap: 25px;
+}
+.recruitment-card {
+    background-color: white;
+
+    padding: 25px;
+
+    border-radius: 12px;
+
+    border: 1px solid #e5e7eb;
+
+    box-shadow:
+        0 4px 15px rgba(0, 0, 0, 0.06);
+}
+.recruitment-card h2 {
+    margin-bottom: 15px;
+}
+.recruitment-card p {
+    margin: 10px 0;
+
+    color: #555;
+}
+.open-status {
+    color: #15803d !important;
+
+    font-weight: bold;
+}
+.closed-status {
+    color: #dc2626 !important;
+
+    font-weight: bold;
+}
+.registration-section,
+.application-section {
+    max-width: 700px;
+
+    margin: auto;
+
+    padding: 60px 20px;
+}
+.registration-card,
+.application-card {
+    background-color: white;
+
+    padding: 35px;
+
+    border-radius: 15px;
+
+    border: 1px solid #e5e7eb;
+
+    box-shadow:
+        0 5px 20px rgba(0, 0, 0, 0.08);
+}
+.registration-card h1,
+.application-card h1 {
+    margin-bottom: 10px;
+}
+.registration-card label,
+.application-card label {
+    display: block;
+
+    margin-top: 18px;
+
+    margin-bottom: 6px;
+
+    font-weight: bold;
+}
+.registration-card input,
+.registration-card select,
+.registration-card textarea,
+.application-card input,
+.application-card select,
+.application-card textarea {
+    width: 100%;
+
+    padding: 12px;
+
+    border: 1px solid #d1d5db;
+
+    border-radius: 8px;
+
+    font-size: 15px;
+
+    font-family: inherit;
+}
+.registration-card textarea,
+.application-card textarea {
+    min-height: 120px;
+
+    resize: vertical;
+}
+.registration-card input:focus,
+.registration-card select:focus,
+.registration-card textarea:focus,
+.application-card input:focus,
+.application-card select:focus,
+.application-card textarea:focus {
+    outline: none;
+
+    border-color: #4f46e5;
+
+    box-shadow:
+        0 0 0 3px #eef2ff;
+}
+.registration-card button,
+.application-card button {
+    margin-top: 25px;
+}
+.admin-section {
+    padding: 50px;
+
+    max-width: 1200px;
+
+    margin: auto;
+}
+.admin-section > h1 {
+    margin-bottom: 8px;
+}
+.admin-stats {
+    display: grid;
+
+    grid-template-columns:
+        repeat(3, 1fr);
+
+    gap: 20px;
+
+    margin-top: 30px;
+}
+.stat-card {
+    background-color: white;
+
+    padding: 25px;
+
+    text-align: center;
+
+    border-radius: 12px;
+
+    border: 1px solid #e5e7eb;
+
+    box-shadow:
+        0 4px 15px rgba(0, 0, 0, 0.06);
+}
+.stat-card h2 {
+    font-size: 35px;
+
+    margin-bottom: 5px;
+}
+.admin-applications {
+    margin-top: 40px;
+
+    background-color: white;
+
+    padding: 30px;
+
+    border-radius: 12px;
+
+    border: 1px solid #e5e7eb;
+}
+.application-card {
+    background-color: #f9fafb;
+
+    padding: 20px;
+
+    margin-top: 15px;
+
+    border-radius: 10px;
+
+    border: 1px solid #e5e7eb;
+}
+.application-card h3 {
+    margin-bottom: 10px;
+}
+.application-card p {
+    margin: 6px 0;
+}
+.application-actions {
+    display: flex;
+
+    gap: 10px;
+
+    margin-top: 15px;
+}
+footer {
+    margin-top: 50px;
+
+    padding: 25px;
+
+    text-align: center;
+
+    background-color: #ffffff;
+
+    border-top: 1px solid #e5e5e5;
+
+    color: #666;
+}
+@media (max-width: 800px) {
+
+    .navbar {
+        padding: 15px 20px;
+
+        flex-direction: column;
+
+        gap: 15px;
+    }
+    .navbar nav {
+        flex-wrap: wrap;
+
+        justify-content: center;
+
+        gap: 15px;
+    }
+    .hero h1 {
+        font-size: 32px;
+    }
+    .clubs-section,
+    .events-section,
+    .recruitment-section,
+    .placeholder-section {
+        padding: 40px 20px;
+    }
+    .clubs-container,
+    #events-container,
+    #recruitment-container {
+        grid-template-columns: 1fr;
+    }
+    .admin-section {
+        padding: 30px 20px;
+    }
+    .admin-stats {
+        grid-template-columns: 1fr;
+    }
+    .registration-card,
+    .application-card,
+    .event-details-card {
+        padding: 25px;
+    }
+
+}
+.portal-page {
+    min-height: 100vh;
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    padding: 40px 20px;
+
+    background:
+        linear-gradient(
+            135deg,
+            #eef2ff,
+            #f8fafc
+        );
+}
+.portal-container {
+    width: 100%;
+
+    max-width: 900px;
+
+    text-align: center;
+}
+.portal-header {
+    margin-bottom: 40px;
+}
+.portal-header h1 {
+    font-size: 42px;
+
+    margin-bottom: 10px;
+}
+.portal-header p {
+    color: #666;
+
+    font-size: 17px;
+}
+.portal-cards {
+    display: grid;
+
+    grid-template-columns:
+        repeat(2, 1fr);
+
+    gap: 30px;
+}
+.portal-card {
+    background: white;
+
+    padding: 40px 30px;
+
+    border-radius: 16px;
+
+    border: 1px solid #e5e7eb;
+
+    box-shadow:
+        0 8px 25px rgba(0, 0, 0, 0.08);
+
+    transition: 0.2s;
+}
+.portal-card:hover {
+    transform: translateY(-5px);
+
+    box-shadow:
+        0 12px 30px rgba(0, 0, 0, 0.12);
+}
+.portal-icon {
+    font-size: 45px;
+
+    margin-bottom: 15px;
+}
+.portal-card h2 {
+    margin-bottom: 12px;
+
+    font-size: 26px;
+}
+.portal-card p {
+    color: #666;
+
+    margin-bottom: 25px;
+}
+.portal-card .primary-btn {
+    display: inline-block;
+}
+@media (max-width: 650px) {
+
+    .portal-cards {
+        grid-template-columns: 1fr;
+    }
+
+
+    .portal-header h1 {
+        font-size: 34px;
+    }
+
+}
+.admin-management {
+    margin-top: 40px;
+
+    background: white;
+
+    padding: 30px;
+
+    border-radius: 12px;
+
+    border: 1px solid #e5e7eb;
+
+    box-shadow:
+        0 4px 15px rgba(0, 0, 0, 0.05);
+}
+
+
+.management-header {
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    margin-bottom: 25px;
+
+    gap: 15px;
+}
+
+
+.management-card {
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    gap: 20px;
+
+    padding: 20px;
+
+    margin-top: 15px;
+
+    background: #f9fafb;
+
+    border: 1px solid #e5e7eb;
+
+    border-radius: 10px;
+}
+
+
+.management-card h3 {
+    margin-bottom: 8px;
+}
+
+
+.management-card p {
+    margin: 6px 0;
+
+    color: #555;
+}
+
+
+.management-actions {
+    display: flex;
+
+    gap: 10px;
+
+    flex-shrink: 0;
+}
+
+
+.danger-button {
+    background-color: #dc2626 !important;
+}
+
+
+.danger-button:hover {
+    background-color: #b91c1c !important;
+}
+
+
+/* =========================================
+   ADMIN MODALS
+========================================= */
+
+.admin-modal {
+    display: none;
+
+    position: fixed;
+
+    inset: 0;
+
+    background: rgba(0, 0, 0, 0.5);
+
+    padding: 30px;
+
+    overflow-y: auto;
+
+    z-index: 1000;
+}
+
+
+.admin-modal.show {
+    display: flex;
+
+    justify-content: center;
+
+    align-items: flex-start;
+}
+
+
+.admin-modal-content {
+    width: 100%;
+
+    max-width: 600px;
+
+    margin: 30px auto;
+
+    padding: 35px;
+
+    background: white;
+
+    border-radius: 15px;
+
+    position: relative;
+}
+
+
+.close-modal {
+    position: absolute;
+
+    top: 15px;
+
+    right: 15px;
+
+    width: 38px;
+
+    height: 38px;
+
+    padding: 0;
+
+    border-radius: 50%;
+
+    background: #f3f4f6;
+
+    color: #333;
+
+    font-size: 24px;
+}
+
+
+.close-modal:hover {
+    background: #e5e7eb;
+
+    color: #111;
+}
+
+
+.admin-modal-content label {
+    display: block;
+
+    margin-top: 16px;
+
+    margin-bottom: 6px;
+
+    font-weight: bold;
+}
+
+
+.admin-modal-content input,
+.admin-modal-content select,
+.admin-modal-content textarea {
+    width: 100%;
+
+    padding: 11px;
+
+    border: 1px solid #d1d5db;
+
+    border-radius: 8px;
+
+    font-family: inherit;
+
+    font-size: 15px;
+}
+
+
+.admin-modal-content textarea {
+    min-height: 100px;
+
+    resize: vertical;
+}
+
+
+/* =========================================
+   MOBILE ADMIN
+========================================= */
+
+@media (max-width: 700px) {
+
+    .management-header {
+        flex-direction: column;
+
+        align-items: flex-start;
+    }
+
+
+    .management-card {
+        flex-direction: column;
+
+        align-items: flex-start;
+    }
+
+
+    .management-actions {
+        width: 100%;
+    }
+
+
+    .management-actions button {
+        flex: 1;
+    }
+
+
+    .admin-modal {
+        padding: 15px;
+    }
+
+
+    .admin-modal-content {
+        padding: 25px 20px;
+    }
+
+}

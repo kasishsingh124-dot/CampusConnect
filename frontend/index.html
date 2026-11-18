@@ -1,0 +1,224 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>CampusConnect | College Clubs & Events</title>
+
+    <link rel="stylesheet" href="css/style.css">
+
+</head>
+
+
+<body>
+
+
+    <!-- ================= HEADER ================= -->
+
+    <header class="navbar">
+
+        <div class="logo">
+            CampusConnect
+        </div>
+
+
+        <nav>
+
+            <a href="index.html">
+                Home
+            </a>
+
+            <a href="#clubs">
+                Clubs
+            </a>
+
+            <a href="events.html">
+                Events
+            </a>
+
+            <a href="recruitment.html">
+                Recruitment
+            </a>
+
+        </nav>
+
+    </header>
+
+
+
+    <!-- ================= MAIN ================= -->
+
+    <main>
+
+
+        <!-- ================= HERO ================= -->
+
+        <section class="hero">
+
+            <div class="hero-content">
+
+                <h1>
+                    Discover Your Campus Community
+                </h1>
+
+
+                <p>
+                    Explore college clubs, upcoming events,
+                    and recruitment opportunities all in one place.
+                </p>
+
+
+                <button
+                    class="primary-btn"
+                    onclick="document.getElementById('clubs').scrollIntoView({ behavior: 'smooth' })">
+
+                    Explore Clubs
+
+                </button>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- ================= CLUBS ================= -->
+
+        <section
+            id="clubs"
+            class="clubs-section">
+
+
+            <div class="section-heading">
+
+                <h2>
+                    College Clubs
+                </h2>
+
+
+                <p>
+                    Discover clubs and find a community
+                    that matches your interests.
+                </p>
+
+            </div>
+
+
+
+            <!-- Clubs are loaded from MongoDB
+                 through app.js -->
+
+            <div
+                id="clubs-container"
+                class="clubs-container">
+
+                <p>
+                    Loading clubs...
+                </p>
+
+            </div>
+
+
+        </section>
+
+
+
+        <!-- ================= EVENTS ================= -->
+
+        <section
+            id="events"
+            class="placeholder-section">
+
+
+            <div class="section-heading">
+
+                <h2>
+                    Upcoming Events
+                </h2>
+
+
+                <p>
+                    Discover what's happening on campus.
+                </p>
+
+
+                <a
+                    href="events.html"
+                    class="primary-btn">
+
+                    View All Events
+
+                </a>
+
+            </div>
+
+
+        </section>
+
+
+
+        <!-- ================= RECRUITMENT ================= -->
+
+        <section
+            id="recruitment"
+            class="placeholder-section">
+
+
+            <div class="section-heading">
+
+                <h2>
+                    Club Recruitment
+                </h2>
+
+
+                <p>
+                    Find clubs that are currently
+                    accepting new members.
+                </p>
+
+
+                <a
+                    href="recruitment.html"
+                    class="primary-btn">
+
+                    View Recruitment
+
+                </a>
+
+            </div>
+
+
+        </section>
+
+
+    </main>
+
+
+
+    <!-- ================= FOOTER ================= -->
+
+    <footer>
+
+        <p>
+            © 2026 CampusConnect.
+            College Clubs & Events Portal.
+        </p>
+
+    </footer>
+
+
+
+    <!-- ================= JAVASCRIPT ================= -->
+
+    <script src="js/app.js"></script>
+
+
+</body>
+
+</html>

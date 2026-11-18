@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>Event Registration | CampusConnect</title>
+
+    <link rel="stylesheet" href="css/style.css">
+
+</head>
+
+<body>
+
+    <header class="navbar">
+
+        <div class="logo">
+            CampusConnect
+        </div>
+
+        <nav>
+
+            <a href="index.html">Home</a>
+
+            <a href="index.html#clubs">Clubs</a>
+
+            <a href="events.html">Events</a>
+
+            <a href="index.html#recruitment">
+                Recruitment
+            </a>
+
+        </nav>
+
+    </header>
+
+
+    <main>
+
+        <section class="registration-section">
+
+            <div class="registration-card">
+
+                <h1>
+                    Event Registration
+                </h1>
+
+                <p id="event-name">
+                    Loading event...
+                </p>
+
+
+                <form id="registration-form">
+
+                    <label for="name">
+                        Full Name
+                    </label>
+
+                    <input
+                        type="text"
+                        id="name"
+                        required
+                    >
+
+
+                    <label for="email">
+                        Email
+                    </label>
+
+                    <input
+                        type="email"
+                        id="email"
+                        required
+                    >
+
+
+                    <label for="course">
+                        Course
+                    </label>
+
+                    <input
+                        type="text"
+                        id="course"
+                        placeholder="e.g. B.Tech CSE"
+                        required
+                    >
+
+
+                    <label for="year">
+                        Year
+                    </label>
+
+                    <select id="year" required>
+
+                        <option value="">
+                            Select Year
+                        </option>
+
+                        <option value="1">
+                            1st Year
+                        </option>
+
+                        <option value="2">
+                            2nd Year
+                        </option>
+
+                        <option value="3">
+                            3rd Year
+                        </option>
+
+                        <option value="4">
+                            4th Year
+                        </option>
+
+                    </select>
+
+
+                    <label for="phone">
+                        Phone Number
+                    </label>
+
+                    <input
+                        type="tel"
+                        id="phone"
+                        required
+                    >
+
+
+                    <button type="submit">
+                        Register for Event
+                    </button>
+
+                </form>
+
+
+                <p id="registration-message"></p>
+
+
+                <a href="events.html">
+                    ← Back to Events
+                </a>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <script src="js/event-register.js"></script>
+
+</body>
+
+</html>
